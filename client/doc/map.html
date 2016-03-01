@@ -1,0 +1,67 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <script src="./google-code-prettify/run_prettify.js?lang=proto&skin=desert"></script>
+</head>
+<body>
+<div>
+    <h2>ENTER</h2>
+    <p style="word-break:break-all">进入地图，前端在将地图资源加载完毕之后再发进入请求<p>
+    <pre class="prettyprint lang-proto">
+// 前端请求进入地图
+message C2S_MAP_ENTER
+{
+}
+// 进入地图返回
+message S2C_MAP_ENTER
+{
+    optional org.shell.error.ERROR_CODE error = 1; // 错误码
+}
+    </pre>
+</div>
+    <h2>ROUND</h2>
+    <p style="word-break:break-all">同步地图上的信息<p>
+    <pre class="prettyprint lang-proto">
+// 前端通过enter判定是否是因为进入地图而发送的
+message S2C_MAP_ROUND
+{
+    optional bool enter = 1; // 是否是进入地图发送的
+    repeated org.shell.game.role.message.ROLE_MAP role = 2; // 角色信息
+    repeated org.shell.game.pet.message.PET_MAP pet = 3; // 宠物信息
+    repeated org.shell.game.monster.message.MONSTER_MAP monster = 4; // 怪物信息
+    repeated org.shell.game.item.message.ITEM_MAP item = 5; // 道具信息
+}
+    </pre>
+</div>
+    <h2>ROLE</h2>
+    <p style="word-break:break-all">同步地图上的玩家<p>
+    <pre class="prettyprint lang-proto">
+// 
+message S2C_MAP_ROLE
+{
+    optional org.shell.game.role.message.ROLE_MAP role = 1; // 角色信息
+}
+    </pre>
+</div>
+    <h2>SYNC_LINE</h2>
+    <p style="word-break:break-all">同步当前线的数量<p>
+    <pre class="prettyprint lang-proto">
+// 
+message S2C_MAP_SYNC_LINE
+{
+    optional int32 map = 1; // 对应普通地图的id
+    optional int32 openLine = 2; // 已经开启的线的数量
+}
+    </pre>
+</div>
+
+<div>
+    <h2>结构</h2>
+
+<h2>枚举类型</h2>
+    </pre>
+</div>
+</body>
+</html>
