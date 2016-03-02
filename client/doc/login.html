@@ -8,7 +8,7 @@
 <body>
 <div>
     <h2>LOGIN</h2>
-    <p style="word-break:break-all">登录<p>
+    <p style="word-break:break-all">登陆<p>
     <pre class="prettyprint lang-proto">
 // 前端请求登录
 message C2S_LOGIN_LOGIN
@@ -20,7 +20,7 @@ message C2S_LOGIN_LOGIN
     optional int32 time = 5; // 时间戳
     optional string sign = 6; // 验证串
 }
-// 登录返回
+// 登录返回，前端需要判定ROLE_SELF.name是否为空,如果为空则需要发送创角消息(C2S_LOGIN_CREATE_ROLE),否则根据ROLE_SELF.map加载对应地图资源，然后发送进入地图消息(C2S_MAP_ENTER)
 message S2C_LOGIN_LOGIN
 {
     optional org.shell.error.ERROR_CODE error = 1; // 错误码
@@ -31,12 +31,12 @@ message S2C_LOGIN_LOGIN
     <h2>CREATE_ROLE</h2>
     <p style="word-break:break-all">创角<p>
     <pre class="prettyprint lang-proto">
-// 前端请求创角
+// 前端请求创角,仅仅在没有角色的情况下才发送
 message C2S_LOGIN_CREATE_ROLE
 {
     optional string name = 1; // 角色名字
 }
-// 创角返回
+// 创角返回,根据ROLE_SELF.map加载对应地图资源，然后发送进入地图消息(C2S_MAP_ENTER)
 message S2C_LOGIN_CREATE_ROLE
 {
     optional org.shell.error.ERROR_CODE error = 1; // 错误码
