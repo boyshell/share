@@ -8,9 +8,8 @@ package org.shell.game.config.proto.monster {
 	import flash.utils.IExternalizable;
 	import flash.errors.IOError;
 	import org.shell.game.config.proto.monster.Category;
-	import org.shell.game.config.proto.monster.Boss;
-	import org.shell.game.config.proto.monster.Minio;
 	import org.shell.game.config.proto.monster.WorldBoss;
+	import org.shell.game.config.proto.monster.Monster;
 	// @@protoc_insertion_point(imports)
 
 	// @@protoc_insertion_point(class_metadata)
@@ -26,23 +25,15 @@ package org.shell.game.config.proto.monster {
 		/**
 		 *  @private
 		 */
-		public static const MINIO:RepeatedFieldDescriptor_TYPE_MESSAGE = new RepeatedFieldDescriptor_TYPE_MESSAGE("org.shell.game.config.proto.monster.Group.Minio", "minio", (2 << 3) | com.netease.protobuf.WireType.LENGTH_DELIMITED, function():Class { return org.shell.game.config.proto.monster.Minio; });
+		public static const MONSTER:RepeatedFieldDescriptor_TYPE_MESSAGE = new RepeatedFieldDescriptor_TYPE_MESSAGE("org.shell.game.config.proto.monster.Group.Monster", "monster", (2 << 3) | com.netease.protobuf.WireType.LENGTH_DELIMITED, function():Class { return org.shell.game.config.proto.monster.Monster; });
 
-		[ArrayElementType("org.shell.game.config.proto.monster.Minio")]
-		public var minio:Array = [];
-
-		/**
-		 *  @private
-		 */
-		public static const BOSS:RepeatedFieldDescriptor_TYPE_MESSAGE = new RepeatedFieldDescriptor_TYPE_MESSAGE("org.shell.game.config.proto.monster.Group.Boss", "boss", (3 << 3) | com.netease.protobuf.WireType.LENGTH_DELIMITED, function():Class { return org.shell.game.config.proto.monster.Boss; });
-
-		[ArrayElementType("org.shell.game.config.proto.monster.Boss")]
-		public var boss:Array = [];
+		[ArrayElementType("org.shell.game.config.proto.monster.Monster")]
+		public var monster:Array = [];
 
 		/**
 		 *  @private
 		 */
-		public static const WORLDBOSS:RepeatedFieldDescriptor_TYPE_MESSAGE = new RepeatedFieldDescriptor_TYPE_MESSAGE("org.shell.game.config.proto.monster.Group.WorldBoss", "worldBoss", (4 << 3) | com.netease.protobuf.WireType.LENGTH_DELIMITED, function():Class { return org.shell.game.config.proto.monster.WorldBoss; });
+		public static const WORLDBOSS:RepeatedFieldDescriptor_TYPE_MESSAGE = new RepeatedFieldDescriptor_TYPE_MESSAGE("org.shell.game.config.proto.monster.Group.WorldBoss", "worldBoss", (3 << 3) | com.netease.protobuf.WireType.LENGTH_DELIMITED, function():Class { return org.shell.game.config.proto.monster.WorldBoss; });
 
 		[ArrayElementType("org.shell.game.config.proto.monster.WorldBoss")]
 		public var worldBoss:Array = [];
@@ -55,16 +46,12 @@ package org.shell.game.config.proto.monster {
 				com.netease.protobuf.WriteUtils.writeTag(output, com.netease.protobuf.WireType.LENGTH_DELIMITED, 1);
 				com.netease.protobuf.WriteUtils.write_TYPE_MESSAGE(output, this.category[category$index]);
 			}
-			for (var minio$index:uint = 0; minio$index < this.minio.length; ++minio$index) {
+			for (var monster$index:uint = 0; monster$index < this.monster.length; ++monster$index) {
 				com.netease.protobuf.WriteUtils.writeTag(output, com.netease.protobuf.WireType.LENGTH_DELIMITED, 2);
-				com.netease.protobuf.WriteUtils.write_TYPE_MESSAGE(output, this.minio[minio$index]);
-			}
-			for (var boss$index:uint = 0; boss$index < this.boss.length; ++boss$index) {
-				com.netease.protobuf.WriteUtils.writeTag(output, com.netease.protobuf.WireType.LENGTH_DELIMITED, 3);
-				com.netease.protobuf.WriteUtils.write_TYPE_MESSAGE(output, this.boss[boss$index]);
+				com.netease.protobuf.WriteUtils.write_TYPE_MESSAGE(output, this.monster[monster$index]);
 			}
 			for (var worldBoss$index:uint = 0; worldBoss$index < this.worldBoss.length; ++worldBoss$index) {
-				com.netease.protobuf.WriteUtils.writeTag(output, com.netease.protobuf.WireType.LENGTH_DELIMITED, 4);
+				com.netease.protobuf.WriteUtils.writeTag(output, com.netease.protobuf.WireType.LENGTH_DELIMITED, 3);
 				com.netease.protobuf.WriteUtils.write_TYPE_MESSAGE(output, this.worldBoss[worldBoss$index]);
 			}
 			for (var fieldKey:* in this) {
@@ -83,12 +70,9 @@ package org.shell.game.config.proto.monster {
 					this.category.push(com.netease.protobuf.ReadUtils.read_TYPE_MESSAGE(input, new org.shell.game.config.proto.monster.Category()));
 					break;
 				case 2:
-					this.minio.push(com.netease.protobuf.ReadUtils.read_TYPE_MESSAGE(input, new org.shell.game.config.proto.monster.Minio()));
+					this.monster.push(com.netease.protobuf.ReadUtils.read_TYPE_MESSAGE(input, new org.shell.game.config.proto.monster.Monster()));
 					break;
 				case 3:
-					this.boss.push(com.netease.protobuf.ReadUtils.read_TYPE_MESSAGE(input, new org.shell.game.config.proto.monster.Boss()));
-					break;
-				case 4:
 					this.worldBoss.push(com.netease.protobuf.ReadUtils.read_TYPE_MESSAGE(input, new org.shell.game.config.proto.monster.WorldBoss()));
 					break;
 				default:
