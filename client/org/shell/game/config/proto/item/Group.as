@@ -8,9 +8,7 @@ package org.shell.game.config.proto.item {
 	import flash.utils.IExternalizable;
 	import flash.errors.IOError;
 	import org.shell.game.config.proto.item.Category;
-	import org.shell.game.config.proto.item.Equip;
-	import org.shell.game.config.proto.item.Money;
-	import org.shell.game.config.proto.item.Task;
+	import org.shell.game.config.proto.item.Pitem;
 	// @@protoc_insertion_point(imports)
 
 	// @@protoc_insertion_point(class_metadata)
@@ -26,26 +24,10 @@ package org.shell.game.config.proto.item {
 		/**
 		 *  @private
 		 */
-		public static const MONEY:RepeatedFieldDescriptor_TYPE_MESSAGE = new RepeatedFieldDescriptor_TYPE_MESSAGE("org.shell.game.config.proto.item.Group.Money", "money", (2 << 3) | com.netease.protobuf.WireType.LENGTH_DELIMITED, function():Class { return org.shell.game.config.proto.item.Money; });
+		public static const PITEM:RepeatedFieldDescriptor_TYPE_MESSAGE = new RepeatedFieldDescriptor_TYPE_MESSAGE("org.shell.game.config.proto.item.Group.Pitem", "pitem", (2 << 3) | com.netease.protobuf.WireType.LENGTH_DELIMITED, function():Class { return org.shell.game.config.proto.item.Pitem; });
 
-		[ArrayElementType("org.shell.game.config.proto.item.Money")]
-		public var money:Array = [];
-
-		/**
-		 *  @private
-		 */
-		public static const TASK:RepeatedFieldDescriptor_TYPE_MESSAGE = new RepeatedFieldDescriptor_TYPE_MESSAGE("org.shell.game.config.proto.item.Group.Task", "task", (3 << 3) | com.netease.protobuf.WireType.LENGTH_DELIMITED, function():Class { return org.shell.game.config.proto.item.Task; });
-
-		[ArrayElementType("org.shell.game.config.proto.item.Task")]
-		public var task:Array = [];
-
-		/**
-		 *  @private
-		 */
-		public static const EQUIP:RepeatedFieldDescriptor_TYPE_MESSAGE = new RepeatedFieldDescriptor_TYPE_MESSAGE("org.shell.game.config.proto.item.Group.Equip", "equip", (4 << 3) | com.netease.protobuf.WireType.LENGTH_DELIMITED, function():Class { return org.shell.game.config.proto.item.Equip; });
-
-		[ArrayElementType("org.shell.game.config.proto.item.Equip")]
-		public var equip:Array = [];
+		[ArrayElementType("org.shell.game.config.proto.item.Pitem")]
+		public var pitem:Array = [];
 
 		/**
 		 *  @private
@@ -55,17 +37,9 @@ package org.shell.game.config.proto.item {
 				com.netease.protobuf.WriteUtils.writeTag(output, com.netease.protobuf.WireType.LENGTH_DELIMITED, 1);
 				com.netease.protobuf.WriteUtils.write_TYPE_MESSAGE(output, this.category[category$index]);
 			}
-			for (var money$index:uint = 0; money$index < this.money.length; ++money$index) {
+			for (var pitem$index:uint = 0; pitem$index < this.pitem.length; ++pitem$index) {
 				com.netease.protobuf.WriteUtils.writeTag(output, com.netease.protobuf.WireType.LENGTH_DELIMITED, 2);
-				com.netease.protobuf.WriteUtils.write_TYPE_MESSAGE(output, this.money[money$index]);
-			}
-			for (var task$index:uint = 0; task$index < this.task.length; ++task$index) {
-				com.netease.protobuf.WriteUtils.writeTag(output, com.netease.protobuf.WireType.LENGTH_DELIMITED, 3);
-				com.netease.protobuf.WriteUtils.write_TYPE_MESSAGE(output, this.task[task$index]);
-			}
-			for (var equip$index:uint = 0; equip$index < this.equip.length; ++equip$index) {
-				com.netease.protobuf.WriteUtils.writeTag(output, com.netease.protobuf.WireType.LENGTH_DELIMITED, 4);
-				com.netease.protobuf.WriteUtils.write_TYPE_MESSAGE(output, this.equip[equip$index]);
+				com.netease.protobuf.WriteUtils.write_TYPE_MESSAGE(output, this.pitem[pitem$index]);
 			}
 			for (var fieldKey:* in this) {
 				super.writeUnknown(output, fieldKey);
@@ -83,13 +57,7 @@ package org.shell.game.config.proto.item {
 					this.category.push(com.netease.protobuf.ReadUtils.read_TYPE_MESSAGE(input, new org.shell.game.config.proto.item.Category()));
 					break;
 				case 2:
-					this.money.push(com.netease.protobuf.ReadUtils.read_TYPE_MESSAGE(input, new org.shell.game.config.proto.item.Money()));
-					break;
-				case 3:
-					this.task.push(com.netease.protobuf.ReadUtils.read_TYPE_MESSAGE(input, new org.shell.game.config.proto.item.Task()));
-					break;
-				case 4:
-					this.equip.push(com.netease.protobuf.ReadUtils.read_TYPE_MESSAGE(input, new org.shell.game.config.proto.item.Equip()));
+					this.pitem.push(com.netease.protobuf.ReadUtils.read_TYPE_MESSAGE(input, new org.shell.game.config.proto.item.Pitem()));
 					break;
 				default:
 					super.readUnknown(input, tag);

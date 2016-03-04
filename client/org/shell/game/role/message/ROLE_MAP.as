@@ -7,6 +7,7 @@ package org.shell.game.role.message {
 	import flash.utils.IDataOutput;
 	import flash.utils.IExternalizable;
 	import flash.errors.IOError;
+	import org.shell.game.mobject.message.MOBJECT_OBJECT;
 	// @@protoc_insertion_point(imports)
 
 	// @@protoc_insertion_point(class_metadata)
@@ -60,48 +61,23 @@ package org.shell.game.role.message {
 		/**
 		 *  @private
 		 */
-		public static const LEVEL:FieldDescriptor_TYPE_INT32 = new FieldDescriptor_TYPE_INT32("org.shell.game.role.message.ROLE_MAP.level", "level", (3 << 3) | com.netease.protobuf.WireType.VARINT);
-
-		private var level$field:int;
-
-		private var hasField$0:uint = 0;
-
-		public function clearLevel():void {
-			hasField$0 &= 0xfffffffe;
-			level$field = new int();
-		}
-
-		public function get hasLevel():Boolean {
-			return (hasField$0 & 0x1) != 0;
-		}
-
-		public function set level(value:int):void {
-			hasField$0 |= 0x1;
-			level$field = value;
-		}
-
-		public function get level():int {
-			return level$field;
-		}
-
-		/**
-		 *  @private
-		 */
-		public static const SERVER:FieldDescriptor_TYPE_INT32 = new FieldDescriptor_TYPE_INT32("org.shell.game.role.message.ROLE_MAP.server", "server", (4 << 3) | com.netease.protobuf.WireType.VARINT);
+		public static const SERVER:FieldDescriptor_TYPE_INT32 = new FieldDescriptor_TYPE_INT32("org.shell.game.role.message.ROLE_MAP.server", "server", (3 << 3) | com.netease.protobuf.WireType.VARINT);
 
 		private var server$field:int;
 
+		private var hasField$0:uint = 0;
+
 		public function clearServer():void {
-			hasField$0 &= 0xfffffffd;
+			hasField$0 &= 0xfffffffe;
 			server$field = new int();
 		}
 
 		public function get hasServer():Boolean {
-			return (hasField$0 & 0x2) != 0;
+			return (hasField$0 & 0x1) != 0;
 		}
 
 		public function set server(value:int):void {
-			hasField$0 |= 0x2;
+			hasField$0 |= 0x1;
 			server$field = value;
 		}
 
@@ -112,21 +88,21 @@ package org.shell.game.role.message {
 		/**
 		 *  @private
 		 */
-		public static const PLATFORM:FieldDescriptor_TYPE_INT32 = new FieldDescriptor_TYPE_INT32("org.shell.game.role.message.ROLE_MAP.platform", "platform", (5 << 3) | com.netease.protobuf.WireType.VARINT);
+		public static const PLATFORM:FieldDescriptor_TYPE_INT32 = new FieldDescriptor_TYPE_INT32("org.shell.game.role.message.ROLE_MAP.platform", "platform", (4 << 3) | com.netease.protobuf.WireType.VARINT);
 
 		private var platform$field:int;
 
 		public function clearPlatform():void {
-			hasField$0 &= 0xfffffffb;
+			hasField$0 &= 0xfffffffd;
 			platform$field = new int();
 		}
 
 		public function get hasPlatform():Boolean {
-			return (hasField$0 & 0x4) != 0;
+			return (hasField$0 & 0x2) != 0;
 		}
 
 		public function set platform(value:int):void {
-			hasField$0 |= 0x4;
+			hasField$0 |= 0x2;
 			platform$field = value;
 		}
 
@@ -137,51 +113,24 @@ package org.shell.game.role.message {
 		/**
 		 *  @private
 		 */
-		public static const X:FieldDescriptor_TYPE_INT32 = new FieldDescriptor_TYPE_INT32("org.shell.game.role.message.ROLE_MAP.x", "x", (6 << 3) | com.netease.protobuf.WireType.VARINT);
+		public static const BASE:FieldDescriptor_TYPE_MESSAGE = new FieldDescriptor_TYPE_MESSAGE("org.shell.game.role.message.ROLE_MAP.base", "base", (5 << 3) | com.netease.protobuf.WireType.LENGTH_DELIMITED, function():Class { return org.shell.game.mobject.message.MOBJECT_OBJECT; });
 
-		private var x$field:int;
+		private var base$field:org.shell.game.mobject.message.MOBJECT_OBJECT;
 
-		public function clearX():void {
-			hasField$0 &= 0xfffffff7;
-			x$field = new int();
+		public function clearBase():void {
+			base$field = null;
 		}
 
-		public function get hasX():Boolean {
-			return (hasField$0 & 0x8) != 0;
+		public function get hasBase():Boolean {
+			return base$field != null;
 		}
 
-		public function set x(value:int):void {
-			hasField$0 |= 0x8;
-			x$field = value;
+		public function set base(value:org.shell.game.mobject.message.MOBJECT_OBJECT):void {
+			base$field = value;
 		}
 
-		public function get x():int {
-			return x$field;
-		}
-
-		/**
-		 *  @private
-		 */
-		public static const Y:FieldDescriptor_TYPE_INT32 = new FieldDescriptor_TYPE_INT32("org.shell.game.role.message.ROLE_MAP.y", "y", (7 << 3) | com.netease.protobuf.WireType.VARINT);
-
-		private var y$field:int;
-
-		public function clearY():void {
-			hasField$0 &= 0xffffffef;
-			y$field = new int();
-		}
-
-		public function get hasY():Boolean {
-			return (hasField$0 & 0x10) != 0;
-		}
-
-		public function set y(value:int):void {
-			hasField$0 |= 0x10;
-			y$field = value;
-		}
-
-		public function get y():int {
-			return y$field;
+		public function get base():org.shell.game.mobject.message.MOBJECT_OBJECT {
+			return base$field;
 		}
 
 		/**
@@ -196,25 +145,17 @@ package org.shell.game.role.message {
 				com.netease.protobuf.WriteUtils.writeTag(output, com.netease.protobuf.WireType.LENGTH_DELIMITED, 2);
 				com.netease.protobuf.WriteUtils.write_TYPE_STRING(output, name$field);
 			}
-			if (hasLevel) {
-				com.netease.protobuf.WriteUtils.writeTag(output, com.netease.protobuf.WireType.VARINT, 3);
-				com.netease.protobuf.WriteUtils.write_TYPE_INT32(output, level$field);
-			}
 			if (hasServer) {
-				com.netease.protobuf.WriteUtils.writeTag(output, com.netease.protobuf.WireType.VARINT, 4);
+				com.netease.protobuf.WriteUtils.writeTag(output, com.netease.protobuf.WireType.VARINT, 3);
 				com.netease.protobuf.WriteUtils.write_TYPE_INT32(output, server$field);
 			}
 			if (hasPlatform) {
-				com.netease.protobuf.WriteUtils.writeTag(output, com.netease.protobuf.WireType.VARINT, 5);
+				com.netease.protobuf.WriteUtils.writeTag(output, com.netease.protobuf.WireType.VARINT, 4);
 				com.netease.protobuf.WriteUtils.write_TYPE_INT32(output, platform$field);
 			}
-			if (hasX) {
-				com.netease.protobuf.WriteUtils.writeTag(output, com.netease.protobuf.WireType.VARINT, 6);
-				com.netease.protobuf.WriteUtils.write_TYPE_INT32(output, x$field);
-			}
-			if (hasY) {
-				com.netease.protobuf.WriteUtils.writeTag(output, com.netease.protobuf.WireType.VARINT, 7);
-				com.netease.protobuf.WriteUtils.write_TYPE_INT32(output, y$field);
+			if (hasBase) {
+				com.netease.protobuf.WriteUtils.writeTag(output, com.netease.protobuf.WireType.LENGTH_DELIMITED, 5);
+				com.netease.protobuf.WriteUtils.write_TYPE_MESSAGE(output, base$field);
 			}
 			for (var fieldKey:* in this) {
 				super.writeUnknown(output, fieldKey);
@@ -227,11 +168,9 @@ package org.shell.game.role.message {
 		override com.netease.protobuf.used_by_generated_code final function readFromSlice(input:flash.utils.IDataInput, bytesAfterSlice:uint):void {
 			var id$count:uint = 0;
 			var name$count:uint = 0;
-			var level$count:uint = 0;
 			var server$count:uint = 0;
 			var platform$count:uint = 0;
-			var x$count:uint = 0;
-			var y$count:uint = 0;
+			var base$count:uint = 0;
 			while (input.bytesAvailable > bytesAfterSlice) {
 				var tag:uint = com.netease.protobuf.ReadUtils.read_TYPE_UINT32(input);
 				switch (tag >> 3) {
@@ -250,39 +189,26 @@ package org.shell.game.role.message {
 					this.name = com.netease.protobuf.ReadUtils.read_TYPE_STRING(input);
 					break;
 				case 3:
-					if (level$count != 0) {
-						throw new flash.errors.IOError('Bad data format: ROLE_MAP.level cannot be set twice.');
-					}
-					++level$count;
-					this.level = com.netease.protobuf.ReadUtils.read_TYPE_INT32(input);
-					break;
-				case 4:
 					if (server$count != 0) {
 						throw new flash.errors.IOError('Bad data format: ROLE_MAP.server cannot be set twice.');
 					}
 					++server$count;
 					this.server = com.netease.protobuf.ReadUtils.read_TYPE_INT32(input);
 					break;
-				case 5:
+				case 4:
 					if (platform$count != 0) {
 						throw new flash.errors.IOError('Bad data format: ROLE_MAP.platform cannot be set twice.');
 					}
 					++platform$count;
 					this.platform = com.netease.protobuf.ReadUtils.read_TYPE_INT32(input);
 					break;
-				case 6:
-					if (x$count != 0) {
-						throw new flash.errors.IOError('Bad data format: ROLE_MAP.x cannot be set twice.');
+				case 5:
+					if (base$count != 0) {
+						throw new flash.errors.IOError('Bad data format: ROLE_MAP.base cannot be set twice.');
 					}
-					++x$count;
-					this.x = com.netease.protobuf.ReadUtils.read_TYPE_INT32(input);
-					break;
-				case 7:
-					if (y$count != 0) {
-						throw new flash.errors.IOError('Bad data format: ROLE_MAP.y cannot be set twice.');
-					}
-					++y$count;
-					this.y = com.netease.protobuf.ReadUtils.read_TYPE_INT32(input);
+					++base$count;
+					this.base = new org.shell.game.mobject.message.MOBJECT_OBJECT();
+					com.netease.protobuf.ReadUtils.read_TYPE_MESSAGE(input, this.base);
 					break;
 				default:
 					super.readUnknown(input, tag);

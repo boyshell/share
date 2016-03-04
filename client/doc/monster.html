@@ -15,11 +15,8 @@
 message MONSTER_MAP
 {
     optional int64 id = 1; // 怪物id
-    optional string name = 2; // 名字
-    optional int32 level = 3; // 等级
-    optional int32 model = 4; // 对应怪物表的ID
-    optional int32 x = 5; // 横坐标
-    optional int32 y = 6; // 纵坐标
+    optional int32 model = 2; // 对应怪物表的ID
+    optional org.shell.game.mobject.message.MOBJECT_OBJECT base = 3; // 基本信息
 }
     </pre>
 </div>

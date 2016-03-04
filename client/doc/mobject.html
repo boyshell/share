@@ -1,0 +1,48 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <script src="./google-code-prettify/run_prettify.js?lang=proto&skin=desert"></script>
+</head>
+<body>
+<div>
+
+<div>
+    <h2>结构</h2>
+    <pre class="prettyprint lang-proto">
+// 坐标点
+message MOBJECT_POSITION
+{
+    optional int32 x = 1; // 横坐标
+    optional int32 y = 2; // 纵坐标
+}
+    </pre>
+</div>
+    <pre class="prettyprint lang-proto">
+// 地图上的对象(除开道具)
+message MOBJECT_OBJECT
+{
+    optional MOBJECT_POSITION position = 1; // 坐标
+    optional int32 curHp = 2; // 当前血量
+    optional int32 maxHp = 3; // 血量上限
+    optional MOBJECT_MOVE moveInfo = 4; // 路径信息
+    optional int32 level = 5; // 等级
+}
+    </pre>
+</div>
+    <pre class="prettyprint lang-proto">
+// 移动信息
+message MOBJECT_MOVE
+{
+    optional int32 speed = 1; // 每秒移动的像素
+    repeated MOBJECT_POSITION path = 2; // 关键点路径
+}
+    </pre>
+</div>
+
+<h2>枚举类型</h2>
+    </pre>
+</div>
+</body>
+</html>

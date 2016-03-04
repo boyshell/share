@@ -1,4 +1,4 @@
-package org.shell.game.config.proto.map {
+package org.shell.game.move.message {
 	import com.netease.protobuf.*;
 	use namespace com.netease.protobuf.used_by_generated_code;
 	import com.netease.protobuf.fieldDescriptors.*;
@@ -7,26 +7,26 @@ package org.shell.game.config.proto.map {
 	import flash.utils.IDataOutput;
 	import flash.utils.IExternalizable;
 	import flash.errors.IOError;
-	import org.shell.game.config.proto.map.Pmap;
+	import org.shell.game.mobject.message.MOBJECT_POSITION;
 	// @@protoc_insertion_point(imports)
 
 	// @@protoc_insertion_point(class_metadata)
-	public dynamic final class Group extends com.netease.protobuf.Message {
+	public dynamic final class C2S_MOVE_ROLE_MOVE extends com.netease.protobuf.Message {
 		/**
 		 *  @private
 		 */
-		public static const PMAP:RepeatedFieldDescriptor_TYPE_MESSAGE = new RepeatedFieldDescriptor_TYPE_MESSAGE("org.shell.game.config.proto.map.Group.Pmap", "pmap", (1 << 3) | com.netease.protobuf.WireType.LENGTH_DELIMITED, function():Class { return org.shell.game.config.proto.map.Pmap; });
+		public static const PATH:RepeatedFieldDescriptor_TYPE_MESSAGE = new RepeatedFieldDescriptor_TYPE_MESSAGE("org.shell.game.move.message.C2S_MOVE_ROLE_MOVE.path", "path", (1 << 3) | com.netease.protobuf.WireType.LENGTH_DELIMITED, function():Class { return org.shell.game.mobject.message.MOBJECT_POSITION; });
 
-		[ArrayElementType("org.shell.game.config.proto.map.Pmap")]
-		public var pmap:Array = [];
+		[ArrayElementType("org.shell.game.mobject.message.MOBJECT_POSITION")]
+		public var path:Array = [];
 
 		/**
 		 *  @private
 		 */
 		override com.netease.protobuf.used_by_generated_code final function writeToBuffer(output:com.netease.protobuf.WritingBuffer):void {
-			for (var pmap$index:uint = 0; pmap$index < this.pmap.length; ++pmap$index) {
+			for (var path$index:uint = 0; path$index < this.path.length; ++path$index) {
 				com.netease.protobuf.WriteUtils.writeTag(output, com.netease.protobuf.WireType.LENGTH_DELIMITED, 1);
-				com.netease.protobuf.WriteUtils.write_TYPE_MESSAGE(output, this.pmap[pmap$index]);
+				com.netease.protobuf.WriteUtils.write_TYPE_MESSAGE(output, this.path[path$index]);
 			}
 			for (var fieldKey:* in this) {
 				super.writeUnknown(output, fieldKey);
@@ -41,7 +41,7 @@ package org.shell.game.config.proto.map {
 				var tag:uint = com.netease.protobuf.ReadUtils.read_TYPE_UINT32(input);
 				switch (tag >> 3) {
 				case 1:
-					this.pmap.push(com.netease.protobuf.ReadUtils.read_TYPE_MESSAGE(input, new org.shell.game.config.proto.map.Pmap()));
+					this.path.push(com.netease.protobuf.ReadUtils.read_TYPE_MESSAGE(input, new org.shell.game.mobject.message.MOBJECT_POSITION()));
 					break;
 				default:
 					super.readUnknown(input, tag);

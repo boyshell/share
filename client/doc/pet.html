@@ -15,10 +15,8 @@
 message PET_MAP
 {
     optional fixed64 id = 1; // id
-    optional string name = 2; // 名字
-    optional int32 model = 3; // 对应宠物表的ID
-    optional int32 x = 4; // 横坐标
-    optional int32 y = 5; // 纵坐标
+    optional int32 model = 2; // 对应宠物表的ID
+    optional org.shell.game.mobject.message.MOBJECT_OBJECT base = 3; // 基本信息
 }
     </pre>
 </div>

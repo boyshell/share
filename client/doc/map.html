@@ -21,6 +21,17 @@ message S2C_MAP_ENTER
 }
     </pre>
 </div>
+    <h2>SYNC_LINE</h2>
+    <p style="word-break:break-all">同步当前线的数量<p>
+    <pre class="prettyprint lang-proto">
+// 
+message S2C_MAP_SYNC_LINE
+{
+    optional int32 map = 1; // 对应普通地图的id
+    optional int32 openLine = 2; // 已经开启的线的数量
+}
+    </pre>
+</div>
     <h2>ROUND</h2>
     <p style="word-break:break-all">同步地图上的信息<p>
     <pre class="prettyprint lang-proto">
@@ -35,6 +46,23 @@ message S2C_MAP_ROUND
 }
     </pre>
 </div>
+    <h2>ROUND_CHANGE</h2>
+    <p style="word-break:break-all">地图上的信息发生变更<p>
+    <pre class="prettyprint lang-proto">
+// 前端通过enter判定是否是因为进入地图而发送的
+message S2C_MAP_ROUND_CHANGE
+{
+    repeated org.shell.game.role.message.ROLE_MAP addRole = 1; // 新增角色信息
+    repeated org.shell.game.pet.message.PET_MAP addPet = 2; // 新增宠物信息
+    repeated org.shell.game.monster.message.MONSTER_MAP addMonster = 3; // 新增怪物信息
+    repeated org.shell.game.item.message.ITEM_MAP addItem = 4; // 新增道具信息
+    repeated fixed64 removeRole = 5; // 移除角色信息
+    repeated fixed64 removePet = 6; // 移除宠物信息
+    repeated int64 removeMonster = 7; // 移除怪物信息
+    repeated int64 removeItem = 8; // 移除道具信息
+}
+    </pre>
+</div>
     <h2>ROLE</h2>
     <p style="word-break:break-all">同步地图上的玩家<p>
     <pre class="prettyprint lang-proto">
@@ -45,14 +73,73 @@ message S2C_MAP_ROLE
 }
     </pre>
 </div>
-    <h2>SYNC_LINE</h2>
-    <p style="word-break:break-all">同步当前线的数量<p>
+    <h2>MONSTER</h2>
+    <p style="word-break:break-all">同步地图上的怪物<p>
     <pre class="prettyprint lang-proto">
 // 
-message S2C_MAP_SYNC_LINE
+message S2C_MAP_MONSTER
 {
-    optional int32 map = 1; // 对应普通地图的id
-    optional int32 openLine = 2; // 已经开启的线的数量
+    optional org.shell.game.monster.message.MONSTER_MAP monster = 1; // 怪物信息
+}
+    </pre>
+</div>
+    <h2>PET</h2>
+    <p style="word-break:break-all">同步地图上的宠物<p>
+    <pre class="prettyprint lang-proto">
+// 
+message S2C_MAP_PET
+{
+    optional org.shell.game.pet.message.PET_MAP pet = 1; // 宠物信息
+}
+    </pre>
+</div>
+    <h2>ITEM</h2>
+    <p style="word-break:break-all">同步地图上的道具<p>
+    <pre class="prettyprint lang-proto">
+// 
+message S2C_MAP_ITEM
+{
+    optional org.shell.game.item.message.ITEM_MAP item = 1; // 道具信息
+}
+    </pre>
+</div>
+    <h2>REMOVE_ROLE</h2>
+    <p style="word-break:break-all">移除地图上的玩家<p>
+    <pre class="prettyprint lang-proto">
+// 
+message S2C_MAP_REMOVE_ROLE
+{
+    optional fixed64 role = 1; // 角色信息
+}
+    </pre>
+</div>
+    <h2>REMOVE_MONSTER</h2>
+    <p style="word-break:break-all">移除地图上的怪物<p>
+    <pre class="prettyprint lang-proto">
+// 
+message S2C_MAP_REMOVE_MONSTER
+{
+    optional int64 monster = 1; // 怪物信息
+}
+    </pre>
+</div>
+    <h2>REMOVE_PET</h2>
+    <p style="word-break:break-all">移除地图上的宠物<p>
+    <pre class="prettyprint lang-proto">
+// 
+message S2C_MAP_REMOVE_PET
+{
+    optional fixed64 pet = 1; // 宠物信息
+}
+    </pre>
+</div>
+    <h2>REMOVE_ITEM</h2>
+    <p style="word-break:break-all">移除地图上的道具<p>
+    <pre class="prettyprint lang-proto">
+// 
+message S2C_MAP_REMOVE_ITEM
+{
+    optional int64 item = 1; // 道具信息
 }
     </pre>
 </div>

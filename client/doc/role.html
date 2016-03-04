@@ -30,11 +30,9 @@ message ROLE_MAP
 {
     optional fixed64 id = 1; // 角色id
     optional string name = 2; // 名字
-    optional int32 level = 3; // 等级
-    optional int32 server = 4; // 服务器
-    optional int32 platform = 5; // 平台
-    optional int32 x = 6; // 横坐标
-    optional int32 y = 7; // 纵坐标
+    optional int32 server = 3; // 服务器
+    optional int32 platform = 4; // 平台
+    optional org.shell.game.mobject.message.MOBJECT_OBJECT base = 5; // 基本信息
 }
     </pre>
 </div>

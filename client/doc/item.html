@@ -15,10 +15,8 @@
 message ITEM_MAP
 {
     optional int64 id = 1; // 道具id
-    optional string name = 2; // 名字
-    optional int32 model = 3; // 对应道具表的ID
-    optional int32 x = 4; // 横坐标
-    optional int32 y = 5; // 纵坐标
+    optional int32 model = 2; // 对应道具表的ID
+    optional org.shell.game.mobject.message.MOBJECT_POSITION position = 3; // 坐标
 }
     </pre>
 </div>

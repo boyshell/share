@@ -16,11 +16,11 @@ package org.shell.game.config.proto.monster {
 	// @@protoc_insertion_point(imports)
 
 	// @@protoc_insertion_point(class_metadata)
-	public dynamic final class Monster extends com.netease.protobuf.Message {
+	public dynamic final class Pmonster extends com.netease.protobuf.Message {
 		/**
 		 *  @private
 		 */
-		public static const FOLLOW:FieldDescriptor_TYPE_INT32 = new FieldDescriptor_TYPE_INT32("org.shell.game.config.proto.monster.Monster.follow", "follow", (11 << 3) | com.netease.protobuf.WireType.VARINT);
+		public static const FOLLOW:FieldDescriptor_TYPE_INT32 = new FieldDescriptor_TYPE_INT32("org.shell.game.config.proto.monster.Pmonster.follow", "follow", (11 << 3) | com.netease.protobuf.WireType.VARINT);
 
 		private var follow$field:int;
 
@@ -47,7 +47,7 @@ package org.shell.game.config.proto.monster {
 		/**
 		 *  @private
 		 */
-		public static const REBORN:FieldDescriptor_TYPE_INT32 = new FieldDescriptor_TYPE_INT32("org.shell.game.config.proto.monster.Monster.reborn", "reborn", (12 << 3) | com.netease.protobuf.WireType.VARINT);
+		public static const REBORN:FieldDescriptor_TYPE_INT32 = new FieldDescriptor_TYPE_INT32("org.shell.game.config.proto.monster.Pmonster.reborn", "reborn", (12 << 3) | com.netease.protobuf.WireType.VARINT);
 
 		private var reborn$field:int;
 
@@ -72,7 +72,7 @@ package org.shell.game.config.proto.monster {
 		/**
 		 *  @private
 		 */
-		public static const HPCOUNT:FieldDescriptor_TYPE_INT32 = new FieldDescriptor_TYPE_INT32("org.shell.game.config.proto.monster.Monster.hpCount", "hpCount", (13 << 3) | com.netease.protobuf.WireType.VARINT);
+		public static const HPCOUNT:FieldDescriptor_TYPE_INT32 = new FieldDescriptor_TYPE_INT32("org.shell.game.config.proto.monster.Pmonster.hpCount", "hpCount", (13 << 3) | com.netease.protobuf.WireType.VARINT);
 
 		private var hpCount$field:int;
 
@@ -97,7 +97,7 @@ package org.shell.game.config.proto.monster {
 		/**
 		 *  @private
 		 */
-		public static const IDENTITY:FieldDescriptor_TYPE_ENUM = new FieldDescriptor_TYPE_ENUM("org.shell.game.config.proto.monster.Monster.identity", "identity", (14 << 3) | com.netease.protobuf.WireType.VARINT, org.shell.game.config.proto.monster.Identity);
+		public static const IDENTITY:FieldDescriptor_TYPE_ENUM = new FieldDescriptor_TYPE_ENUM("org.shell.game.config.proto.monster.Pmonster.identity", "identity", (14 << 3) | com.netease.protobuf.WireType.VARINT, org.shell.game.config.proto.monster.Identity);
 
 		private var identity$field:int;
 
@@ -122,7 +122,7 @@ package org.shell.game.config.proto.monster {
 		/**
 		 *  @private
 		 */
-		public static const MAP:FieldDescriptor_TYPE_INT32 = new FieldDescriptor_TYPE_INT32("org.shell.game.config.proto.monster.Monster.map", "map", (15 << 3) | com.netease.protobuf.WireType.VARINT);
+		public static const MAP:FieldDescriptor_TYPE_INT32 = new FieldDescriptor_TYPE_INT32("org.shell.game.config.proto.monster.Pmonster.map", "map", (15 << 3) | com.netease.protobuf.WireType.VARINT);
 
 		private var map$field:int;
 
@@ -147,7 +147,7 @@ package org.shell.game.config.proto.monster {
 		/**
 		 *  @private
 		 */
-		public static const POSITION:FieldDescriptor_TYPE_MESSAGE = new FieldDescriptor_TYPE_MESSAGE("org.shell.game.config.proto.monster.Monster.position", "position", (16 << 3) | com.netease.protobuf.WireType.LENGTH_DELIMITED, function():Class { return org.shell.game.config.proto.map.Position; });
+		public static const POSITION:FieldDescriptor_TYPE_MESSAGE = new FieldDescriptor_TYPE_MESSAGE("org.shell.game.config.proto.monster.Pmonster.position", "position", (16 << 3) | com.netease.protobuf.WireType.LENGTH_DELIMITED, function():Class { return org.shell.game.config.proto.map.Position; });
 
 		private var position$field:org.shell.game.config.proto.map.Position;
 
@@ -170,7 +170,7 @@ package org.shell.game.config.proto.monster {
 		/**
 		 *  @private
 		 */
-		public static const COUNT:FieldDescriptor_TYPE_INT32 = new FieldDescriptor_TYPE_INT32("org.shell.game.config.proto.monster.Monster.count", "count", (17 << 3) | com.netease.protobuf.WireType.VARINT);
+		public static const COUNT:FieldDescriptor_TYPE_INT32 = new FieldDescriptor_TYPE_INT32("org.shell.game.config.proto.monster.Pmonster.count", "count", (17 << 3) | com.netease.protobuf.WireType.VARINT);
 
 		private var count$field:int;
 
@@ -195,7 +195,7 @@ package org.shell.game.config.proto.monster {
 		/**
 		 *  @private
 		 */
-		public static const TIMERSKILL:FieldDescriptor_TYPE_MESSAGE = new FieldDescriptor_TYPE_MESSAGE("org.shell.game.config.proto.monster.Monster.timerSkill", "timerSkill", (18 << 3) | com.netease.protobuf.WireType.LENGTH_DELIMITED, function():Class { return org.shell.game.config.proto.monster.TimerSkillList; });
+		public static const TIMERSKILL:FieldDescriptor_TYPE_MESSAGE = new FieldDescriptor_TYPE_MESSAGE("org.shell.game.config.proto.monster.Pmonster.timerSkill", "timerSkill", (18 << 3) | com.netease.protobuf.WireType.LENGTH_DELIMITED, function():Class { return org.shell.game.config.proto.monster.TimerSkillList; });
 
 		private var timerSkill$field:org.shell.game.config.proto.monster.TimerSkillList;
 
@@ -218,7 +218,7 @@ package org.shell.game.config.proto.monster {
 		/**
 		 *  @private
 		 */
-		public static const HPSKILL:FieldDescriptor_TYPE_MESSAGE = new FieldDescriptor_TYPE_MESSAGE("org.shell.game.config.proto.monster.Monster.hpSkill", "hpSkill", (19 << 3) | com.netease.protobuf.WireType.LENGTH_DELIMITED, function():Class { return org.shell.game.config.proto.monster.HpSkillList; });
+		public static const HPSKILL:FieldDescriptor_TYPE_MESSAGE = new FieldDescriptor_TYPE_MESSAGE("org.shell.game.config.proto.monster.Pmonster.hpSkill", "hpSkill", (19 << 3) | com.netease.protobuf.WireType.LENGTH_DELIMITED, function():Class { return org.shell.game.config.proto.monster.HpSkillList; });
 
 		private var hpSkill$field:org.shell.game.config.proto.monster.HpSkillList;
 
@@ -241,7 +241,7 @@ package org.shell.game.config.proto.monster {
 		/**
 		 *  @private
 		 */
-		public static const ID:FieldDescriptor_TYPE_INT32 = new FieldDescriptor_TYPE_INT32("org.shell.game.config.proto.monster.Monster.id", "id", (1 << 3) | com.netease.protobuf.WireType.VARINT);
+		public static const ID:FieldDescriptor_TYPE_INT32 = new FieldDescriptor_TYPE_INT32("org.shell.game.config.proto.monster.Pmonster.id", "id", (1 << 3) | com.netease.protobuf.WireType.VARINT);
 
 		private var id$field:int;
 
@@ -266,7 +266,7 @@ package org.shell.game.config.proto.monster {
 		/**
 		 *  @private
 		 */
-		public static const TYPE:FieldDescriptor_TYPE_ENUM = new FieldDescriptor_TYPE_ENUM("org.shell.game.config.proto.monster.Monster.type", "type", (2 << 3) | com.netease.protobuf.WireType.VARINT, org.shell.game.config.proto.monster.Type);
+		public static const TYPE:FieldDescriptor_TYPE_ENUM = new FieldDescriptor_TYPE_ENUM("org.shell.game.config.proto.monster.Pmonster.type", "type", (2 << 3) | com.netease.protobuf.WireType.VARINT, org.shell.game.config.proto.monster.Type);
 
 		private var type$field:int;
 
@@ -291,7 +291,7 @@ package org.shell.game.config.proto.monster {
 		/**
 		 *  @private
 		 */
-		public static const NAME:FieldDescriptor_TYPE_STRING = new FieldDescriptor_TYPE_STRING("org.shell.game.config.proto.monster.Monster.name", "name", (3 << 3) | com.netease.protobuf.WireType.LENGTH_DELIMITED);
+		public static const NAME:FieldDescriptor_TYPE_STRING = new FieldDescriptor_TYPE_STRING("org.shell.game.config.proto.monster.Pmonster.name", "name", (3 << 3) | com.netease.protobuf.WireType.LENGTH_DELIMITED);
 
 		private var name$field:String;
 
@@ -314,7 +314,7 @@ package org.shell.game.config.proto.monster {
 		/**
 		 *  @private
 		 */
-		public static const LEVEL:FieldDescriptor_TYPE_INT32 = new FieldDescriptor_TYPE_INT32("org.shell.game.config.proto.monster.Monster.level", "level", (4 << 3) | com.netease.protobuf.WireType.VARINT);
+		public static const LEVEL:FieldDescriptor_TYPE_INT32 = new FieldDescriptor_TYPE_INT32("org.shell.game.config.proto.monster.Pmonster.level", "level", (4 << 3) | com.netease.protobuf.WireType.VARINT);
 
 		private var level$field:int;
 
@@ -339,7 +339,7 @@ package org.shell.game.config.proto.monster {
 		/**
 		 *  @private
 		 */
-		public static const ICON:FieldDescriptor_TYPE_STRING = new FieldDescriptor_TYPE_STRING("org.shell.game.config.proto.monster.Monster.icon", "icon", (5 << 3) | com.netease.protobuf.WireType.LENGTH_DELIMITED);
+		public static const ICON:FieldDescriptor_TYPE_STRING = new FieldDescriptor_TYPE_STRING("org.shell.game.config.proto.monster.Pmonster.icon", "icon", (5 << 3) | com.netease.protobuf.WireType.LENGTH_DELIMITED);
 
 		private var icon$field:String;
 
@@ -362,7 +362,7 @@ package org.shell.game.config.proto.monster {
 		/**
 		 *  @private
 		 */
-		public static const SKIN:FieldDescriptor_TYPE_STRING = new FieldDescriptor_TYPE_STRING("org.shell.game.config.proto.monster.Monster.skin", "skin", (6 << 3) | com.netease.protobuf.WireType.LENGTH_DELIMITED);
+		public static const SKIN:FieldDescriptor_TYPE_STRING = new FieldDescriptor_TYPE_STRING("org.shell.game.config.proto.monster.Pmonster.skin", "skin", (6 << 3) | com.netease.protobuf.WireType.LENGTH_DELIMITED);
 
 		private var skin$field:String;
 
@@ -385,7 +385,7 @@ package org.shell.game.config.proto.monster {
 		/**
 		 *  @private
 		 */
-		public static const ATTRIBUTE:FieldDescriptor_TYPE_MESSAGE = new FieldDescriptor_TYPE_MESSAGE("org.shell.game.config.proto.monster.Monster.attribute", "attribute", (7 << 3) | com.netease.protobuf.WireType.LENGTH_DELIMITED, function():Class { return org.shell.game.config.proto.fight.FixAttributeList; });
+		public static const ATTRIBUTE:FieldDescriptor_TYPE_MESSAGE = new FieldDescriptor_TYPE_MESSAGE("org.shell.game.config.proto.monster.Pmonster.attribute", "attribute", (7 << 3) | com.netease.protobuf.WireType.LENGTH_DELIMITED, function():Class { return org.shell.game.config.proto.fight.FixAttributeList; });
 
 		private var attribute$field:org.shell.game.config.proto.fight.FixAttributeList;
 
@@ -408,7 +408,7 @@ package org.shell.game.config.proto.monster {
 		/**
 		 *  @private
 		 */
-		public static const SPEED:FieldDescriptor_TYPE_INT32 = new FieldDescriptor_TYPE_INT32("org.shell.game.config.proto.monster.Monster.speed", "speed", (8 << 3) | com.netease.protobuf.WireType.VARINT);
+		public static const SPEED:FieldDescriptor_TYPE_INT32 = new FieldDescriptor_TYPE_INT32("org.shell.game.config.proto.monster.Pmonster.speed", "speed", (8 << 3) | com.netease.protobuf.WireType.VARINT);
 
 		private var speed$field:int;
 
@@ -433,7 +433,7 @@ package org.shell.game.config.proto.monster {
 		/**
 		 *  @private
 		 */
-		public static const VIEW:FieldDescriptor_TYPE_INT32 = new FieldDescriptor_TYPE_INT32("org.shell.game.config.proto.monster.Monster.view", "view", (9 << 3) | com.netease.protobuf.WireType.VARINT);
+		public static const VIEW:FieldDescriptor_TYPE_INT32 = new FieldDescriptor_TYPE_INT32("org.shell.game.config.proto.monster.Pmonster.view", "view", (9 << 3) | com.netease.protobuf.WireType.VARINT);
 
 		private var view$field:int;
 
@@ -458,7 +458,7 @@ package org.shell.game.config.proto.monster {
 		/**
 		 *  @private
 		 */
-		public static const PATROL:FieldDescriptor_TYPE_INT32 = new FieldDescriptor_TYPE_INT32("org.shell.game.config.proto.monster.Monster.patrol", "patrol", (10 << 3) | com.netease.protobuf.WireType.VARINT);
+		public static const PATROL:FieldDescriptor_TYPE_INT32 = new FieldDescriptor_TYPE_INT32("org.shell.game.config.proto.monster.Pmonster.patrol", "patrol", (10 << 3) | com.netease.protobuf.WireType.VARINT);
 
 		private var patrol$field:int;
 
@@ -593,42 +593,42 @@ package org.shell.game.config.proto.monster {
 				switch (tag >> 3) {
 				case 11:
 					if (follow$count != 0) {
-						throw new flash.errors.IOError('Bad data format: Monster.follow cannot be set twice.');
+						throw new flash.errors.IOError('Bad data format: Pmonster.follow cannot be set twice.');
 					}
 					++follow$count;
 					this.follow = com.netease.protobuf.ReadUtils.read_TYPE_INT32(input);
 					break;
 				case 12:
 					if (reborn$count != 0) {
-						throw new flash.errors.IOError('Bad data format: Monster.reborn cannot be set twice.');
+						throw new flash.errors.IOError('Bad data format: Pmonster.reborn cannot be set twice.');
 					}
 					++reborn$count;
 					this.reborn = com.netease.protobuf.ReadUtils.read_TYPE_INT32(input);
 					break;
 				case 13:
 					if (hpCount$count != 0) {
-						throw new flash.errors.IOError('Bad data format: Monster.hpCount cannot be set twice.');
+						throw new flash.errors.IOError('Bad data format: Pmonster.hpCount cannot be set twice.');
 					}
 					++hpCount$count;
 					this.hpCount = com.netease.protobuf.ReadUtils.read_TYPE_INT32(input);
 					break;
 				case 14:
 					if (identity$count != 0) {
-						throw new flash.errors.IOError('Bad data format: Monster.identity cannot be set twice.');
+						throw new flash.errors.IOError('Bad data format: Pmonster.identity cannot be set twice.');
 					}
 					++identity$count;
 					this.identity = com.netease.protobuf.ReadUtils.read_TYPE_ENUM(input);
 					break;
 				case 15:
 					if (map$count != 0) {
-						throw new flash.errors.IOError('Bad data format: Monster.map cannot be set twice.');
+						throw new flash.errors.IOError('Bad data format: Pmonster.map cannot be set twice.');
 					}
 					++map$count;
 					this.map = com.netease.protobuf.ReadUtils.read_TYPE_INT32(input);
 					break;
 				case 16:
 					if (position$count != 0) {
-						throw new flash.errors.IOError('Bad data format: Monster.position cannot be set twice.');
+						throw new flash.errors.IOError('Bad data format: Pmonster.position cannot be set twice.');
 					}
 					++position$count;
 					this.position = new org.shell.game.config.proto.map.Position();
@@ -636,14 +636,14 @@ package org.shell.game.config.proto.monster {
 					break;
 				case 17:
 					if (count$count != 0) {
-						throw new flash.errors.IOError('Bad data format: Monster.count cannot be set twice.');
+						throw new flash.errors.IOError('Bad data format: Pmonster.count cannot be set twice.');
 					}
 					++count$count;
 					this.count = com.netease.protobuf.ReadUtils.read_TYPE_INT32(input);
 					break;
 				case 18:
 					if (timerSkill$count != 0) {
-						throw new flash.errors.IOError('Bad data format: Monster.timerSkill cannot be set twice.');
+						throw new flash.errors.IOError('Bad data format: Pmonster.timerSkill cannot be set twice.');
 					}
 					++timerSkill$count;
 					this.timerSkill = new org.shell.game.config.proto.monster.TimerSkillList();
@@ -651,7 +651,7 @@ package org.shell.game.config.proto.monster {
 					break;
 				case 19:
 					if (hpSkill$count != 0) {
-						throw new flash.errors.IOError('Bad data format: Monster.hpSkill cannot be set twice.');
+						throw new flash.errors.IOError('Bad data format: Pmonster.hpSkill cannot be set twice.');
 					}
 					++hpSkill$count;
 					this.hpSkill = new org.shell.game.config.proto.monster.HpSkillList();
@@ -659,49 +659,49 @@ package org.shell.game.config.proto.monster {
 					break;
 				case 1:
 					if (id$count != 0) {
-						throw new flash.errors.IOError('Bad data format: Monster.id cannot be set twice.');
+						throw new flash.errors.IOError('Bad data format: Pmonster.id cannot be set twice.');
 					}
 					++id$count;
 					this.id = com.netease.protobuf.ReadUtils.read_TYPE_INT32(input);
 					break;
 				case 2:
 					if (type$count != 0) {
-						throw new flash.errors.IOError('Bad data format: Monster.type cannot be set twice.');
+						throw new flash.errors.IOError('Bad data format: Pmonster.type cannot be set twice.');
 					}
 					++type$count;
 					this.type = com.netease.protobuf.ReadUtils.read_TYPE_ENUM(input);
 					break;
 				case 3:
 					if (name$count != 0) {
-						throw new flash.errors.IOError('Bad data format: Monster.name cannot be set twice.');
+						throw new flash.errors.IOError('Bad data format: Pmonster.name cannot be set twice.');
 					}
 					++name$count;
 					this.name = com.netease.protobuf.ReadUtils.read_TYPE_STRING(input);
 					break;
 				case 4:
 					if (level$count != 0) {
-						throw new flash.errors.IOError('Bad data format: Monster.level cannot be set twice.');
+						throw new flash.errors.IOError('Bad data format: Pmonster.level cannot be set twice.');
 					}
 					++level$count;
 					this.level = com.netease.protobuf.ReadUtils.read_TYPE_INT32(input);
 					break;
 				case 5:
 					if (icon$count != 0) {
-						throw new flash.errors.IOError('Bad data format: Monster.icon cannot be set twice.');
+						throw new flash.errors.IOError('Bad data format: Pmonster.icon cannot be set twice.');
 					}
 					++icon$count;
 					this.icon = com.netease.protobuf.ReadUtils.read_TYPE_STRING(input);
 					break;
 				case 6:
 					if (skin$count != 0) {
-						throw new flash.errors.IOError('Bad data format: Monster.skin cannot be set twice.');
+						throw new flash.errors.IOError('Bad data format: Pmonster.skin cannot be set twice.');
 					}
 					++skin$count;
 					this.skin = com.netease.protobuf.ReadUtils.read_TYPE_STRING(input);
 					break;
 				case 7:
 					if (attribute$count != 0) {
-						throw new flash.errors.IOError('Bad data format: Monster.attribute cannot be set twice.');
+						throw new flash.errors.IOError('Bad data format: Pmonster.attribute cannot be set twice.');
 					}
 					++attribute$count;
 					this.attribute = new org.shell.game.config.proto.fight.FixAttributeList();
@@ -709,21 +709,21 @@ package org.shell.game.config.proto.monster {
 					break;
 				case 8:
 					if (speed$count != 0) {
-						throw new flash.errors.IOError('Bad data format: Monster.speed cannot be set twice.');
+						throw new flash.errors.IOError('Bad data format: Pmonster.speed cannot be set twice.');
 					}
 					++speed$count;
 					this.speed = com.netease.protobuf.ReadUtils.read_TYPE_INT32(input);
 					break;
 				case 9:
 					if (view$count != 0) {
-						throw new flash.errors.IOError('Bad data format: Monster.view cannot be set twice.');
+						throw new flash.errors.IOError('Bad data format: Pmonster.view cannot be set twice.');
 					}
 					++view$count;
 					this.view = com.netease.protobuf.ReadUtils.read_TYPE_INT32(input);
 					break;
 				case 10:
 					if (patrol$count != 0) {
-						throw new flash.errors.IOError('Bad data format: Monster.patrol cannot be set twice.');
+						throw new flash.errors.IOError('Bad data format: Pmonster.patrol cannot be set twice.');
 					}
 					++patrol$count;
 					this.patrol = com.netease.protobuf.ReadUtils.read_TYPE_INT32(input);

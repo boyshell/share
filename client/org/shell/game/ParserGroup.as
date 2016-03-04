@@ -7,9 +7,19 @@ package org.shell.game {
     import org.shell.game.login.message.S2C_LOGIN_SYNC_VERSION;
     import org.shell.game.map.message.C2S_MAP_ENTER;
     import org.shell.game.map.message.S2C_MAP_ENTER;
-    import org.shell.game.map.message.S2C_MAP_ROUND;
-    import org.shell.game.map.message.S2C_MAP_ROLE;
     import org.shell.game.map.message.S2C_MAP_SYNC_LINE;
+    import org.shell.game.map.message.S2C_MAP_ROUND;
+    import org.shell.game.map.message.S2C_MAP_ROUND_CHANGE;
+    import org.shell.game.map.message.S2C_MAP_ROLE;
+    import org.shell.game.map.message.S2C_MAP_MONSTER;
+    import org.shell.game.map.message.S2C_MAP_PET;
+    import org.shell.game.map.message.S2C_MAP_ITEM;
+    import org.shell.game.map.message.S2C_MAP_REMOVE_ROLE;
+    import org.shell.game.map.message.S2C_MAP_REMOVE_MONSTER;
+    import org.shell.game.map.message.S2C_MAP_REMOVE_PET;
+    import org.shell.game.map.message.S2C_MAP_REMOVE_ITEM;
+    import org.shell.game.move.message.C2S_MOVE_ROLE_MOVE;
+    import org.shell.game.move.message.S2C_MOVE_ROLE_MOVE;
 
     import flash.utils.Dictionary;
 
@@ -45,11 +55,21 @@ package org.shell.game {
             this.add(261, S2C_LOGIN_CREATE_ROLE);
             this.add(265, S2C_LOGIN_SYNC_CONFIG);
             this.add(269, S2C_LOGIN_SYNC_VERSION);
-            this.add(768, C2S_MAP_ENTER);
-            this.add(769, S2C_MAP_ENTER);
-            this.add(773, S2C_MAP_ROUND);
-            this.add(777, S2C_MAP_ROLE);
-            this.add(781, S2C_MAP_SYNC_LINE);
+            this.add(512, C2S_MAP_ENTER);
+            this.add(513, S2C_MAP_ENTER);
+            this.add(517, S2C_MAP_SYNC_LINE);
+            this.add(521, S2C_MAP_ROUND);
+            this.add(525, S2C_MAP_ROUND_CHANGE);
+            this.add(529, S2C_MAP_ROLE);
+            this.add(533, S2C_MAP_MONSTER);
+            this.add(537, S2C_MAP_PET);
+            this.add(541, S2C_MAP_ITEM);
+            this.add(545, S2C_MAP_REMOVE_ROLE);
+            this.add(549, S2C_MAP_REMOVE_MONSTER);
+            this.add(553, S2C_MAP_REMOVE_PET);
+            this.add(557, S2C_MAP_REMOVE_ITEM);
+            this.add(768, C2S_MOVE_ROLE_MOVE);
+            this.add(769, S2C_MOVE_ROLE_MOVE);
         }
     }
 }
