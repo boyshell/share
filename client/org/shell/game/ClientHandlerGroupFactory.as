@@ -3,6 +3,7 @@ package org.shell.game {
     import org.shell.game.login.handler.S2C_LOGIN_CREATE_ROLE_HANDLER;
     import org.shell.game.login.handler.S2C_LOGIN_SYNC_CONFIG_HANDLER;
     import org.shell.game.login.handler.S2C_LOGIN_SYNC_VERSION_HANDLER;
+    import org.shell.game.login.handler.S2C_LOGIN_TIMER_HANDLER;
     import org.shell.game.map.handler.S2C_MAP_ENTER_HANDLER;
     import org.shell.game.map.handler.S2C_MAP_SYNC_LINE_HANDLER;
     import org.shell.game.map.handler.S2C_MAP_ROUND_HANDLER;
@@ -35,6 +36,7 @@ package org.shell.game {
             this.handlers[261] = S2C_LOGIN_CREATE_ROLE_HANDLER;
             this.handlers[265] = S2C_LOGIN_SYNC_CONFIG_HANDLER;
             this.handlers[269] = S2C_LOGIN_SYNC_VERSION_HANDLER;
+            this.handlers[273] = S2C_LOGIN_TIMER_HANDLER;
             this.handlers[513] = S2C_MAP_ENTER_HANDLER;
             this.handlers[517] = S2C_MAP_SYNC_LINE_HANDLER;
             this.handlers[521] = S2C_MAP_ROUND_HANDLER;

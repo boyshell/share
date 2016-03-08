@@ -65,6 +65,21 @@ message S2C_LOGIN_SYNC_VERSION
 }
     </pre>
 </div>
+    <h2>TIMER</h2>
+    <p style="word-break:break-all">心跳（同步服务端时间）,为了保证网络资源不会被占用，后端会断开冗余链接（超过1分钟没有任何消息交互的链接）。此消息也可以拿来当作填充消息<p>
+    <pre class="prettyprint lang-proto">
+// 前端请求心跳
+message C2S_LOGIN_TIMER
+{
+}
+// 同步版本信息
+message S2C_LOGIN_TIMER
+{
+    optional org.shell.error.ERROR_CODE error = 1; // 错误码
+    optional fixed64 serverTime = 2; // 服务端UNIX时间戳
+}
+    </pre>
+</div>
 
 <div>
     <h2>结构</h2>

@@ -5,6 +5,8 @@ package org.shell.game {
     import org.shell.game.login.message.S2C_LOGIN_CREATE_ROLE;
     import org.shell.game.login.message.S2C_LOGIN_SYNC_CONFIG;
     import org.shell.game.login.message.S2C_LOGIN_SYNC_VERSION;
+    import org.shell.game.login.message.C2S_LOGIN_TIMER;
+    import org.shell.game.login.message.S2C_LOGIN_TIMER;
     import org.shell.game.map.message.C2S_MAP_ENTER;
     import org.shell.game.map.message.S2C_MAP_ENTER;
     import org.shell.game.map.message.S2C_MAP_SYNC_LINE;
@@ -55,6 +57,8 @@ package org.shell.game {
             this.add(261, S2C_LOGIN_CREATE_ROLE);
             this.add(265, S2C_LOGIN_SYNC_CONFIG);
             this.add(269, S2C_LOGIN_SYNC_VERSION);
+            this.add(272, C2S_LOGIN_TIMER);
+            this.add(273, S2C_LOGIN_TIMER);
             this.add(512, C2S_MAP_ENTER);
             this.add(513, S2C_MAP_ENTER);
             this.add(517, S2C_MAP_SYNC_LINE);

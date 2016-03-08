@@ -8,6 +8,7 @@ package org.shell.game.config.proto.group {
 	import flash.utils.IExternalizable;
 	import flash.errors.IOError;
 	import org.shell.game.config.proto.map.Group;
+	import org.shell.game.config.proto.param.Group;
 	import org.shell.game.config.proto.monster.Group;
 	import org.shell.game.config.proto.item.Group;
 	// @@protoc_insertion_point(imports)
@@ -86,6 +87,29 @@ package org.shell.game.config.proto.group {
 		/**
 		 *  @private
 		 */
+		public static const PARAM:FieldDescriptor_TYPE_MESSAGE = new FieldDescriptor_TYPE_MESSAGE("org.shell.game.config.proto.group.ConfigGroup.param", "param", (4 << 3) | com.netease.protobuf.WireType.LENGTH_DELIMITED, function():Class { return org.shell.game.config.proto.param.Group; });
+
+		private var param$field:org.shell.game.config.proto.param.Group;
+
+		public function clearParam():void {
+			param$field = null;
+		}
+
+		public function get hasParam():Boolean {
+			return param$field != null;
+		}
+
+		public function set param(value:org.shell.game.config.proto.param.Group):void {
+			param$field = value;
+		}
+
+		public function get param():org.shell.game.config.proto.param.Group {
+			return param$field;
+		}
+
+		/**
+		 *  @private
+		 */
 		override com.netease.protobuf.used_by_generated_code final function writeToBuffer(output:com.netease.protobuf.WritingBuffer):void {
 			if (hasMap) {
 				com.netease.protobuf.WriteUtils.writeTag(output, com.netease.protobuf.WireType.LENGTH_DELIMITED, 1);
@@ -99,6 +123,10 @@ package org.shell.game.config.proto.group {
 				com.netease.protobuf.WriteUtils.writeTag(output, com.netease.protobuf.WireType.LENGTH_DELIMITED, 3);
 				com.netease.protobuf.WriteUtils.write_TYPE_MESSAGE(output, item$field);
 			}
+			if (hasParam) {
+				com.netease.protobuf.WriteUtils.writeTag(output, com.netease.protobuf.WireType.LENGTH_DELIMITED, 4);
+				com.netease.protobuf.WriteUtils.write_TYPE_MESSAGE(output, param$field);
+			}
 			for (var fieldKey:* in this) {
 				super.writeUnknown(output, fieldKey);
 			}
@@ -111,6 +139,7 @@ package org.shell.game.config.proto.group {
 			var map$count:uint = 0;
 			var monster$count:uint = 0;
 			var item$count:uint = 0;
+			var param$count:uint = 0;
 			while (input.bytesAvailable > bytesAfterSlice) {
 				var tag:uint = com.netease.protobuf.ReadUtils.read_TYPE_UINT32(input);
 				switch (tag >> 3) {
@@ -137,6 +166,14 @@ package org.shell.game.config.proto.group {
 					++item$count;
 					this.item = new org.shell.game.config.proto.item.Group();
 					com.netease.protobuf.ReadUtils.read_TYPE_MESSAGE(input, this.item);
+					break;
+				case 4:
+					if (param$count != 0) {
+						throw new flash.errors.IOError('Bad data format: ConfigGroup.param cannot be set twice.');
+					}
+					++param$count;
+					this.param = new org.shell.game.config.proto.param.Group();
+					com.netease.protobuf.ReadUtils.read_TYPE_MESSAGE(input, this.param);
 					break;
 				default:
 					super.readUnknown(input, tag);

@@ -7,8 +7,6 @@ package org.shell.game.config.proto.map {
 	import flash.utils.IDataOutput;
 	import flash.utils.IExternalizable;
 	import flash.errors.IOError;
-	import org.shell.game.config.proto.map.Type;
-	import org.shell.game.config.proto.map.Position;
 	// @@protoc_insertion_point(imports)
 
 	// @@protoc_insertion_point(class_metadata)
@@ -318,7 +316,7 @@ package org.shell.game.config.proto.map {
 		/**
 		 *  @private
 		 */
-		public static const TYPE:FieldDescriptor_TYPE_ENUM = new FieldDescriptor_TYPE_ENUM("org.shell.game.config.proto.map.Pmap.type", "type", (2 << 3) | com.netease.protobuf.WireType.VARINT, org.shell.game.config.proto.map.Type);
+		public static const TYPE:FieldDescriptor_TYPE_INT32 = new FieldDescriptor_TYPE_INT32("org.shell.game.config.proto.map.Pmap.type", "type", (2 << 3) | com.netease.protobuf.WireType.VARINT);
 
 		private var type$field:int;
 
@@ -514,9 +512,9 @@ package org.shell.game.config.proto.map {
 		/**
 		 *  @private
 		 */
-		public static const RELIVEPOSITION:FieldDescriptor_TYPE_MESSAGE = new FieldDescriptor_TYPE_MESSAGE("org.shell.game.config.proto.map.Pmap.relivePosition", "relivePosition", (20 << 3) | com.netease.protobuf.WireType.LENGTH_DELIMITED, function():Class { return org.shell.game.config.proto.map.Position; });
+		public static const RELIVEPOSITION:FieldDescriptor_TYPE_STRING = new FieldDescriptor_TYPE_STRING("org.shell.game.config.proto.map.Pmap.relivePosition", "relivePosition", (20 << 3) | com.netease.protobuf.WireType.LENGTH_DELIMITED);
 
-		private var relivePosition$field:org.shell.game.config.proto.map.Position;
+		private var relivePosition$field:String;
 
 		public function clearRelivePosition():void {
 			relivePosition$field = null;
@@ -526,11 +524,11 @@ package org.shell.game.config.proto.map {
 			return relivePosition$field != null;
 		}
 
-		public function set relivePosition(value:org.shell.game.config.proto.map.Position):void {
+		public function set relivePosition(value:String):void {
 			relivePosition$field = value;
 		}
 
-		public function get relivePosition():org.shell.game.config.proto.map.Position {
+		public function get relivePosition():String {
 			return relivePosition$field;
 		}
 
@@ -638,7 +636,7 @@ package org.shell.game.config.proto.map {
 			}
 			if (hasType) {
 				com.netease.protobuf.WriteUtils.writeTag(output, com.netease.protobuf.WireType.VARINT, 2);
-				com.netease.protobuf.WriteUtils.write_TYPE_ENUM(output, type$field);
+				com.netease.protobuf.WriteUtils.write_TYPE_INT32(output, type$field);
 			}
 			if (hasName) {
 				com.netease.protobuf.WriteUtils.writeTag(output, com.netease.protobuf.WireType.LENGTH_DELIMITED, 3);
@@ -670,7 +668,7 @@ package org.shell.game.config.proto.map {
 			}
 			if (hasRelivePosition) {
 				com.netease.protobuf.WriteUtils.writeTag(output, com.netease.protobuf.WireType.LENGTH_DELIMITED, 20);
-				com.netease.protobuf.WriteUtils.write_TYPE_MESSAGE(output, relivePosition$field);
+				com.netease.protobuf.WriteUtils.write_TYPE_STRING(output, relivePosition$field);
 			}
 			if (hasReliveProtect) {
 				com.netease.protobuf.WriteUtils.writeTag(output, com.netease.protobuf.WireType.VARINT, 10);
@@ -804,7 +802,7 @@ package org.shell.game.config.proto.map {
 						throw new flash.errors.IOError('Bad data format: Pmap.type cannot be set twice.');
 					}
 					++type$count;
-					this.type = com.netease.protobuf.ReadUtils.read_TYPE_ENUM(input);
+					this.type = com.netease.protobuf.ReadUtils.read_TYPE_INT32(input);
 					break;
 				case 3:
 					if (name$count != 0) {
@@ -860,8 +858,7 @@ package org.shell.game.config.proto.map {
 						throw new flash.errors.IOError('Bad data format: Pmap.relivePosition cannot be set twice.');
 					}
 					++relivePosition$count;
-					this.relivePosition = new org.shell.game.config.proto.map.Position();
-					com.netease.protobuf.ReadUtils.read_TYPE_MESSAGE(input, this.relivePosition);
+					this.relivePosition = com.netease.protobuf.ReadUtils.read_TYPE_STRING(input);
 					break;
 				case 10:
 					if (reliveProtect$count != 0) {

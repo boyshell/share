@@ -1,4 +1,4 @@
-package org.shell.game.config.proto.item {
+package org.shell.game.config {
 	import com.netease.protobuf.*;
 	use namespace com.netease.protobuf.used_by_generated_code;
 	import com.netease.protobuf.fieldDescriptors.*;
@@ -10,34 +10,11 @@ package org.shell.game.config.proto.item {
 	// @@protoc_insertion_point(imports)
 
 	// @@protoc_insertion_point(class_metadata)
-	public dynamic final class Pitem extends com.netease.protobuf.Message {
+	public dynamic final class Item extends com.netease.protobuf.Message {
 		/**
 		 *  @private
 		 */
-		public static const APPENDATTRIBUTE:FieldDescriptor_TYPE_STRING = new FieldDescriptor_TYPE_STRING("org.shell.game.config.proto.item.Pitem.appendAttribute", "appendAttribute", (11 << 3) | com.netease.protobuf.WireType.LENGTH_DELIMITED);
-
-		private var appendAttribute$field:String;
-
-		public function clearAppendAttribute():void {
-			appendAttribute$field = null;
-		}
-
-		public function get hasAppendAttribute():Boolean {
-			return appendAttribute$field != null;
-		}
-
-		public function set appendAttribute(value:String):void {
-			appendAttribute$field = value;
-		}
-
-		public function get appendAttribute():String {
-			return appendAttribute$field;
-		}
-
-		/**
-		 *  @private
-		 */
-		public static const ID:FieldDescriptor_TYPE_INT32 = new FieldDescriptor_TYPE_INT32("org.shell.game.config.proto.item.Pitem.id", "id", (1 << 3) | com.netease.protobuf.WireType.VARINT);
+		public static const ID:FieldDescriptor_TYPE_INT32 = new FieldDescriptor_TYPE_INT32("org.shell.game.config.Item.id", "id", (1 << 3) | com.netease.protobuf.WireType.VARINT);
 
 		private var id$field:int;
 
@@ -64,7 +41,7 @@ package org.shell.game.config.proto.item {
 		/**
 		 *  @private
 		 */
-		public static const TYPE:FieldDescriptor_TYPE_INT32 = new FieldDescriptor_TYPE_INT32("org.shell.game.config.proto.item.Pitem.type", "type", (2 << 3) | com.netease.protobuf.WireType.VARINT);
+		public static const TYPE:FieldDescriptor_TYPE_INT32 = new FieldDescriptor_TYPE_INT32("org.shell.game.config.Item.type", "type", (2 << 3) | com.netease.protobuf.WireType.VARINT);
 
 		private var type$field:int;
 
@@ -89,7 +66,7 @@ package org.shell.game.config.proto.item {
 		/**
 		 *  @private
 		 */
-		public static const NAME:FieldDescriptor_TYPE_STRING = new FieldDescriptor_TYPE_STRING("org.shell.game.config.proto.item.Pitem.name", "name", (3 << 3) | com.netease.protobuf.WireType.LENGTH_DELIMITED);
+		public static const NAME:FieldDescriptor_TYPE_STRING = new FieldDescriptor_TYPE_STRING("org.shell.game.config.Item.name", "name", (3 << 3) | com.netease.protobuf.WireType.LENGTH_DELIMITED);
 
 		private var name$field:String;
 
@@ -112,7 +89,7 @@ package org.shell.game.config.proto.item {
 		/**
 		 *  @private
 		 */
-		public static const DESC:FieldDescriptor_TYPE_STRING = new FieldDescriptor_TYPE_STRING("org.shell.game.config.proto.item.Pitem.desc", "desc", (4 << 3) | com.netease.protobuf.WireType.LENGTH_DELIMITED);
+		public static const DESC:FieldDescriptor_TYPE_STRING = new FieldDescriptor_TYPE_STRING("org.shell.game.config.Item.desc", "desc", (4 << 3) | com.netease.protobuf.WireType.LENGTH_DELIMITED);
 
 		private var desc$field:String;
 
@@ -135,7 +112,7 @@ package org.shell.game.config.proto.item {
 		/**
 		 *  @private
 		 */
-		public static const ICON:FieldDescriptor_TYPE_STRING = new FieldDescriptor_TYPE_STRING("org.shell.game.config.proto.item.Pitem.icon", "icon", (5 << 3) | com.netease.protobuf.WireType.LENGTH_DELIMITED);
+		public static const ICON:FieldDescriptor_TYPE_STRING = new FieldDescriptor_TYPE_STRING("org.shell.game.config.Item.icon", "icon", (5 << 3) | com.netease.protobuf.WireType.LENGTH_DELIMITED);
 
 		private var icon$field:String;
 
@@ -158,7 +135,7 @@ package org.shell.game.config.proto.item {
 		/**
 		 *  @private
 		 */
-		public static const MERGE:FieldDescriptor_TYPE_INT32 = new FieldDescriptor_TYPE_INT32("org.shell.game.config.proto.item.Pitem.merge", "merge", (6 << 3) | com.netease.protobuf.WireType.VARINT);
+		public static const MERGE:FieldDescriptor_TYPE_INT32 = new FieldDescriptor_TYPE_INT32("org.shell.game.config.Item.merge", "merge", (6 << 3) | com.netease.protobuf.WireType.VARINT);
 
 		private var merge$field:int;
 
@@ -183,7 +160,7 @@ package org.shell.game.config.proto.item {
 		/**
 		 *  @private
 		 */
-		public static const USE:FieldDescriptor_TYPE_BOOL = new FieldDescriptor_TYPE_BOOL("org.shell.game.config.proto.item.Pitem.use", "__use", (7 << 3) | com.netease.protobuf.WireType.VARINT);
+		public static const USE:FieldDescriptor_TYPE_BOOL = new FieldDescriptor_TYPE_BOOL("org.shell.game.config.Item.use", "__use", (7 << 3) | com.netease.protobuf.WireType.VARINT);
 
 		private var use$field:Boolean;
 
@@ -208,7 +185,7 @@ package org.shell.game.config.proto.item {
 		/**
 		 *  @private
 		 */
-		public static const POSITION:FieldDescriptor_TYPE_INT32 = new FieldDescriptor_TYPE_INT32("org.shell.game.config.proto.item.Pitem.position", "position", (8 << 3) | com.netease.protobuf.WireType.VARINT);
+		public static const POSITION:FieldDescriptor_TYPE_INT32 = new FieldDescriptor_TYPE_INT32("org.shell.game.config.Item.position", "position", (8 << 3) | com.netease.protobuf.WireType.VARINT);
 
 		private var position$field:int;
 
@@ -233,7 +210,7 @@ package org.shell.game.config.proto.item {
 		/**
 		 *  @private
 		 */
-		public static const LEVEL:FieldDescriptor_TYPE_INT32 = new FieldDescriptor_TYPE_INT32("org.shell.game.config.proto.item.Pitem.level", "level", (9 << 3) | com.netease.protobuf.WireType.VARINT);
+		public static const LEVEL:FieldDescriptor_TYPE_INT32 = new FieldDescriptor_TYPE_INT32("org.shell.game.config.Item.level", "level", (9 << 3) | com.netease.protobuf.WireType.VARINT);
 
 		private var level$field:int;
 
@@ -258,7 +235,7 @@ package org.shell.game.config.proto.item {
 		/**
 		 *  @private
 		 */
-		public static const BASEATRRIBUTE:FieldDescriptor_TYPE_STRING = new FieldDescriptor_TYPE_STRING("org.shell.game.config.proto.item.Pitem.baseAtrribute", "baseAtrribute", (10 << 3) | com.netease.protobuf.WireType.LENGTH_DELIMITED);
+		public static const BASEATRRIBUTE:FieldDescriptor_TYPE_STRING = new FieldDescriptor_TYPE_STRING("org.shell.game.config.Item.baseAtrribute", "baseAtrribute", (10 << 3) | com.netease.protobuf.WireType.LENGTH_DELIMITED);
 
 		private var baseAtrribute$field:String;
 
@@ -281,11 +258,30 @@ package org.shell.game.config.proto.item {
 		/**
 		 *  @private
 		 */
+		public static const APPENDATTRIBUTE:FieldDescriptor_TYPE_STRING = new FieldDescriptor_TYPE_STRING("org.shell.game.config.Item.appendAttribute", "appendAttribute", (11 << 3) | com.netease.protobuf.WireType.LENGTH_DELIMITED);
+
+		private var appendAttribute$field:String;
+
+		public function clearAppendAttribute():void {
+			appendAttribute$field = null;
+		}
+
+		public function get hasAppendAttribute():Boolean {
+			return appendAttribute$field != null;
+		}
+
+		public function set appendAttribute(value:String):void {
+			appendAttribute$field = value;
+		}
+
+		public function get appendAttribute():String {
+			return appendAttribute$field;
+		}
+
+		/**
+		 *  @private
+		 */
 		override com.netease.protobuf.used_by_generated_code final function writeToBuffer(output:com.netease.protobuf.WritingBuffer):void {
-			if (hasAppendAttribute) {
-				com.netease.protobuf.WriteUtils.writeTag(output, com.netease.protobuf.WireType.LENGTH_DELIMITED, 11);
-				com.netease.protobuf.WriteUtils.write_TYPE_STRING(output, appendAttribute$field);
-			}
 			if (hasId) {
 				com.netease.protobuf.WriteUtils.writeTag(output, com.netease.protobuf.WireType.VARINT, 1);
 				com.netease.protobuf.WriteUtils.write_TYPE_INT32(output, id$field);
@@ -326,6 +322,10 @@ package org.shell.game.config.proto.item {
 				com.netease.protobuf.WriteUtils.writeTag(output, com.netease.protobuf.WireType.LENGTH_DELIMITED, 10);
 				com.netease.protobuf.WriteUtils.write_TYPE_STRING(output, baseAtrribute$field);
 			}
+			if (hasAppendAttribute) {
+				com.netease.protobuf.WriteUtils.writeTag(output, com.netease.protobuf.WireType.LENGTH_DELIMITED, 11);
+				com.netease.protobuf.WriteUtils.write_TYPE_STRING(output, appendAttribute$field);
+			}
 			for (var fieldKey:* in this) {
 				super.writeUnknown(output, fieldKey);
 			}
@@ -335,7 +335,6 @@ package org.shell.game.config.proto.item {
 		 *  @private
 		 */
 		override com.netease.protobuf.used_by_generated_code final function readFromSlice(input:flash.utils.IDataInput, bytesAfterSlice:uint):void {
-			var appendAttribute$count:uint = 0;
 			var id$count:uint = 0;
 			var type$count:uint = 0;
 			var name$count:uint = 0;
@@ -346,85 +345,86 @@ package org.shell.game.config.proto.item {
 			var position$count:uint = 0;
 			var level$count:uint = 0;
 			var baseAtrribute$count:uint = 0;
+			var appendAttribute$count:uint = 0;
 			while (input.bytesAvailable > bytesAfterSlice) {
 				var tag:uint = com.netease.protobuf.ReadUtils.read_TYPE_UINT32(input);
 				switch (tag >> 3) {
-				case 11:
-					if (appendAttribute$count != 0) {
-						throw new flash.errors.IOError('Bad data format: Pitem.appendAttribute cannot be set twice.');
-					}
-					++appendAttribute$count;
-					this.appendAttribute = com.netease.protobuf.ReadUtils.read_TYPE_STRING(input);
-					break;
 				case 1:
 					if (id$count != 0) {
-						throw new flash.errors.IOError('Bad data format: Pitem.id cannot be set twice.');
+						throw new flash.errors.IOError('Bad data format: Item.id cannot be set twice.');
 					}
 					++id$count;
 					this.id = com.netease.protobuf.ReadUtils.read_TYPE_INT32(input);
 					break;
 				case 2:
 					if (type$count != 0) {
-						throw new flash.errors.IOError('Bad data format: Pitem.type cannot be set twice.');
+						throw new flash.errors.IOError('Bad data format: Item.type cannot be set twice.');
 					}
 					++type$count;
 					this.type = com.netease.protobuf.ReadUtils.read_TYPE_INT32(input);
 					break;
 				case 3:
 					if (name$count != 0) {
-						throw new flash.errors.IOError('Bad data format: Pitem.name cannot be set twice.');
+						throw new flash.errors.IOError('Bad data format: Item.name cannot be set twice.');
 					}
 					++name$count;
 					this.name = com.netease.protobuf.ReadUtils.read_TYPE_STRING(input);
 					break;
 				case 4:
 					if (desc$count != 0) {
-						throw new flash.errors.IOError('Bad data format: Pitem.desc cannot be set twice.');
+						throw new flash.errors.IOError('Bad data format: Item.desc cannot be set twice.');
 					}
 					++desc$count;
 					this.desc = com.netease.protobuf.ReadUtils.read_TYPE_STRING(input);
 					break;
 				case 5:
 					if (icon$count != 0) {
-						throw new flash.errors.IOError('Bad data format: Pitem.icon cannot be set twice.');
+						throw new flash.errors.IOError('Bad data format: Item.icon cannot be set twice.');
 					}
 					++icon$count;
 					this.icon = com.netease.protobuf.ReadUtils.read_TYPE_STRING(input);
 					break;
 				case 6:
 					if (merge$count != 0) {
-						throw new flash.errors.IOError('Bad data format: Pitem.merge cannot be set twice.');
+						throw new flash.errors.IOError('Bad data format: Item.merge cannot be set twice.');
 					}
 					++merge$count;
 					this.merge = com.netease.protobuf.ReadUtils.read_TYPE_INT32(input);
 					break;
 				case 7:
 					if (use$count != 0) {
-						throw new flash.errors.IOError('Bad data format: Pitem.__use cannot be set twice.');
+						throw new flash.errors.IOError('Bad data format: Item.__use cannot be set twice.');
 					}
 					++use$count;
 					this.__use = com.netease.protobuf.ReadUtils.read_TYPE_BOOL(input);
 					break;
 				case 8:
 					if (position$count != 0) {
-						throw new flash.errors.IOError('Bad data format: Pitem.position cannot be set twice.');
+						throw new flash.errors.IOError('Bad data format: Item.position cannot be set twice.');
 					}
 					++position$count;
 					this.position = com.netease.protobuf.ReadUtils.read_TYPE_INT32(input);
 					break;
 				case 9:
 					if (level$count != 0) {
-						throw new flash.errors.IOError('Bad data format: Pitem.level cannot be set twice.');
+						throw new flash.errors.IOError('Bad data format: Item.level cannot be set twice.');
 					}
 					++level$count;
 					this.level = com.netease.protobuf.ReadUtils.read_TYPE_INT32(input);
 					break;
 				case 10:
 					if (baseAtrribute$count != 0) {
-						throw new flash.errors.IOError('Bad data format: Pitem.baseAtrribute cannot be set twice.');
+						throw new flash.errors.IOError('Bad data format: Item.baseAtrribute cannot be set twice.');
 					}
 					++baseAtrribute$count;
 					this.baseAtrribute = com.netease.protobuf.ReadUtils.read_TYPE_STRING(input);
+					break;
+				case 11:
+					if (appendAttribute$count != 0) {
+						throw new flash.errors.IOError('Bad data format: Item.appendAttribute cannot be set twice.');
+					}
+					++appendAttribute$count;
+					this.appendAttribute = com.netease.protobuf.ReadUtils.read_TYPE_STRING(input);
 					break;
 				default:
 					super.readUnknown(input, tag);

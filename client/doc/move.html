@@ -13,7 +13,7 @@
 // 请求移动
 message C2S_MOVE_ROLE_MOVE
 {
-    repeated org.shell.game.mobject.message.MOBJECT_POSITION path = 1; // 关键点路径
+    repeated org.shell.game.mobject.message.MOBJECT_POSITION path = 1; // 关键点路径(不包含当前点)
 }
 // 角色开始移动
 message S2C_MOVE_ROLE_MOVE
