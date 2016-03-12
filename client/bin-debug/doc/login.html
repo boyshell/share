@@ -1,0 +1,91 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <script src="./google-code-prettify/run_prettify.js?lang=proto&skin=desert"></script>
+</head>
+<body>
+<div>
+    <h2>LOGIN</h2>
+    <p style="word-break:break-all">登陆<p>
+    <pre class="prettyprint lang-proto">
+// 前端请求登录
+message C2S_LOGIN_LOGIN
+{
+    optional string usr = 1; // 账号
+    optional int32 platform = 2; // 平台
+    optional int32 server = 3; // 服务器
+    optional bool adult = 4; // 是否成年
+    optional int32 time = 5; // 时间戳
+    optional string sign = 6; // 验证串
+}
+// 登录返回，前端需要判定ROLE_SELF.name是否为空,如果为空则需要发送创角消息(C2S_LOGIN_CREATE_ROLE),否则根据ROLE_SELF.map加载对应地图资源，然后发送进入地图消息(C2S_MAP_ENTER)
+message S2C_LOGIN_LOGIN
+{
+    optional org.shell.error.ERROR_CODE error = 1; // 错误码
+    optional org.shell.game.role.message.ROLE_SELF self = 2; // 角色信息
+}
+    </pre>
+</div>
+    <h2>CREATE_ROLE</h2>
+    <p style="word-break:break-all">创角<p>
+    <pre class="prettyprint lang-proto">
+// 前端请求创角,仅仅在没有角色的情况下才发送
+message C2S_LOGIN_CREATE_ROLE
+{
+    optional string name = 1; // 角色名字
+}
+// 创角返回,根据ROLE_SELF.map加载对应地图资源，然后发送进入地图消息(C2S_MAP_ENTER)
+message S2C_LOGIN_CREATE_ROLE
+{
+    optional org.shell.error.ERROR_CODE error = 1; // 错误码
+    optional org.shell.game.role.message.ROLE_SELF self = 2; // 角色信息
+}
+    </pre>
+</div>
+    <h2>SYNC_CONFIG</h2>
+    <p style="word-break:break-all">同步配置(调试版本)，连接一建立就会推送，收到该消息之后前端使用ConfigGroup.mergeFrom直接解析即可<p>
+    <pre class="prettyprint lang-proto">
+// 同步配置
+message S2C_LOGIN_SYNC_CONFIG
+{
+    optional bytes data = 1; // 配置proto数据
+}
+    </pre>
+</div>
+    <h2>SYNC_VERSION</h2>
+    <p style="word-break:break-all">同步代码版本和资源版本(正式版本)，在发布版本的时候，后端会告知前端一个版本号，前端收到该消息的时候需要核对代码版本是否跟后端一致，如果不一致则弹框要求清空缓存。对于资源版本前端需要从url/dVersion,其中url为一个http地址，前端需要写死<p>
+    <pre class="prettyprint lang-proto">
+// 同步版本信息
+message S2C_LOGIN_SYNC_VERSION
+{
+    optional string cVersion = 1; // 代码版本
+    optional string dVersion = 2; // 资源版本
+}
+    </pre>
+</div>
+    <h2>TIMER</h2>
+    <p style="word-break:break-all">心跳（同步服务端时间）,为了保证网络资源不会被占用，后端会断开冗余链接（超过1分钟没有任何消息交互的链接）。此消息也可以拿来当作填充消息<p>
+    <pre class="prettyprint lang-proto">
+// 前端请求心跳
+message C2S_LOGIN_TIMER
+{
+}
+// 同步版本信息
+message S2C_LOGIN_TIMER
+{
+    optional org.shell.error.ERROR_CODE error = 1; // 错误码
+    optional fixed64 serverTime = 2; // 服务端UNIX时间戳
+}
+    </pre>
+</div>
+
+<div>
+    <h2>结构</h2>
+
+<h2>枚举类型</h2>
+    </pre>
+</div>
+</body>
+</html>

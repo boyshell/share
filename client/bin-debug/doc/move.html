@@ -1,0 +1,35 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <script src="./google-code-prettify/run_prettify.js?lang=proto&skin=desert"></script>
+</head>
+<body>
+<div>
+    <h2>ROLE_MOVE</h2>
+    <p style="word-break:break-all">角色移动<p>
+    <pre class="prettyprint lang-proto">
+// 请求移动
+message C2S_MOVE_ROLE_MOVE
+{
+    repeated org.shell.game.mobject.message.MOBJECT_POSITION path = 1; // 关键点路径(不包含当前点)
+}
+// 角色开始移动
+message S2C_MOVE_ROLE_MOVE
+{
+    optional org.shell.error.ERROR_CODE error = 1; // 错误码
+    optional fixed64 id = 2; // 角色id
+    optional org.shell.game.mobject.message.MOBJECT_MOVE info = 3; // 移动信息
+}
+    </pre>
+</div>
+
+<div>
+    <h2>结构</h2>
+
+<h2>枚举类型</h2>
+    </pre>
+</div>
+</body>
+</html>
