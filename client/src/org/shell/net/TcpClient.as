@@ -1,4 +1,4 @@
-package org.shell {
+package org.shell.net {
 	import com.netease.protobuf.Message;
 	
 	import flash.events.Event;
@@ -9,9 +9,10 @@ package org.shell {
 	import flash.utils.getDefinitionByName;
 	
 	import avmplus.getQualifiedClassName;
+	
 	import org.shell.game.ClientHandlerGroupFactory;
-	import org.shell.game.ParserGroup;
 	import org.shell.game.Handler;
+	import org.shell.game.ParserGroup;
 
 	// TODO 此类仅仅是一个例子，前端可重写
 	public class TcpClient {
@@ -21,7 +22,21 @@ package org.shell {
 		private var handlerGroup:ClientHandlerGroupFactory = new ClientHandlerGroupFactory();
 		private var parserGroup:ParserGroup = new ParserGroup();
 		
-		public function TcpClient(host:String, port:int) {
+		private var rcvFunction:Function;
+		private var errFunction:Function;
+		private var connectFunction:Function;
+		private var colseFunction:Function;
+		
+		public function TcpClient(host:String, port:int
+								  , rcvFunction:Function
+								  , errFunction:Function
+								  , connectFunction:Function
+								  , colseFunction:Function) {
+			this.connectFunction = connectFunction;
+			this.rcvFunction = rcvFunction;
+			this.errFunction = errFunction;
+			this.colseFunction = colseFunction;
+			
 			this.socket = new Socket();
 			this.socket.addEventListener(ProgressEvent.SOCKET_DATA, onRcv);
 			this.socket.addEventListener(IOErrorEvent.IO_ERROR, ioError);
@@ -34,17 +49,17 @@ package org.shell {
 		
 		protected function connect(event:Event):void
 		{
-			trace("wocao! connect");
+			connectFunction(event);
 		}
 		
 		protected function close(event:Event):void
 		{
-			trace("wocao! close");
+			colseFunction(event);
 		}
 		
 		protected function ioError(event:IOErrorEvent):void
 		{
-			trace("wocao! io error");
+			errFunction(event);
 		}
 		
 		private function onRcv(e:ProgressEvent):void {
@@ -90,8 +105,7 @@ package org.shell {
 			
 			var handler:Handler = createHandler(msgId);
 			handler.message = msg;
-			handler.action();
-			
+			rcvFunction(handler);
 			return len + 4;
 		}
 		
